@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template,jsonify
 import joblib
 import numpy as np
 import pandas as pd
@@ -45,5 +45,6 @@ def predict():
 if __name__ == "__main__":
     # Run app on 0.0.0.0 so it's accessible externally
     app.run(host='0.0.0.0', port=5000, debug=True)
+
 
 
