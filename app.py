@@ -7,7 +7,7 @@ import pandas as pd
 app = Flask(__name__)
 
 # Load your trained model
-model = joblib.load("model.joblib")
+model = joblib.load("insurance.joblib")
 
 @app.route('/')
 def home():
@@ -45,3 +45,4 @@ def predict():
 if __name__ == "__main__":
     # Run app on 0.0.0.0 so it's accessible externally
     app.run(host='0.0.0.0', port=5000, debug=True)
+
