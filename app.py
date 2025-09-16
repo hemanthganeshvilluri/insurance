@@ -37,14 +37,15 @@ def predict():
         # Make prediction
         prediction = model.predict(input_data)[0]
 
-        return jsonify(f'Prediction: ${prediction:,.2f}')
+        return jsonify({"prediction": f"${prediction:,.2f}"})
 
     except Exception as e:
-        return jsonify(f'Error: {str(e)}')
+        return jsonify({'Error': f'{str(e)}'})
 
 if __name__ == "__main__":
     # Run app on 0.0.0.0 so it's accessible externally
     app.run(host='0.0.0.0', port=5000, debug=True)
+
 
 
 
